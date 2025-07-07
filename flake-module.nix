@@ -15,6 +15,7 @@ in
       lib,
       options,
       pkgs,
+      inputs',
       self',
       ...
     }@args:
@@ -51,7 +52,7 @@ in
             {
               _module = {
                 args = args // {
-                  inherit inputs self;
+                  inherit inputs inputs' self;
                 };
               };
             }
